@@ -99,19 +99,19 @@ textarea {
 }
 
 .title__text {
+  @include css-lock(16, 36, 375, 1440, font-size, px);
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
   line-height: 44px;
   text-transform: uppercase;
   color: $color-orange;
 }
 
 .block_description {
+  @include css-lock(12, 16, 375, 1440, font-size, px);
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 40px;
+  line-height: 2.5rem;
   text-transform: uppercase;
   color: $color-white;
 }

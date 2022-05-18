@@ -1,0 +1,23 @@
+.media {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 160px;
+  flex-wrap: wrap;
+  @include media("<=440px") {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .title__text {
+    max-width: 648px;
+  }
+
+  .media__text_block {
+      max-width: 665px;
+      .media__text{
+          margin: 10px;
+      }
+  }
+}

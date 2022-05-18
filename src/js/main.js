@@ -27,4 +27,16 @@ $(function () {
     burger.toggleClass('active');
     burgerSpan.toggleClass('active');
   });
+
+  $('.slider__first').slick({
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 5000,
+    adaptiveHeight: true,
+  });
 });

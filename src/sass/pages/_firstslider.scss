@@ -1,0 +1,128 @@
+.slider__first {
+  position: relative;
+  width: 100%;
+  @include css-lock(30, 180, 370, 1440, margin-bottom, px);
+
+  .slick-list {
+    max-height: 100vh;
+
+    .slick-track {
+      max-height: 100vh;
+
+      .slide {
+        max-height: 100vh;
+      }
+    }
+  }
+
+  .slide {
+    .slide__img {
+      width: 100%;
+      height: 100%;
+      filter: brightness(60%);
+    }
+
+    .left__text {
+      position: absolute;
+      top: 30%;
+      left: 0;
+      padding-left: 80px;
+      max-width: 847px;
+
+      @include media("<=440px") {
+        top: 20%;
+        padding-left: 40px;
+      }
+
+      .slide__text {
+        @include css-lock(16, 40, 370, 1440, font-size, px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.49;
+        text-transform: uppercase;
+
+        @include media("<=tabletReg") {
+          line-height: 1.35;
+        }
+      }
+
+      .slide__adress.block_description {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        text-transform: uppercase;
+
+        @include media("<=tabletMid") {
+          font-size: 12px;
+        }
+        @include media("<=600px") {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .right__text {
+      @include css-lock(100, 559.5, 375, 1440, width, px);
+      position: absolute;
+      right: 80px;
+      bottom: 10%;
+      border-top: 3px solid $color-orange;
+      text-align: end;
+      box-sizing: border-box;
+      padding-top: 40px;
+
+      @include media("<=tabletReg") {
+        padding-top: 20px;
+      }
+
+      @include media("<=tabletSmall") {
+        display: none;
+      }
+
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    right: 80px;
+    bottom: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media("<=tabletReg") {
+      right: 35%;
+      bottom: 5%;
+      flex-direction: row;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid $color-white;
+
+      button {
+        display: none;
+      }
+    }
+
+    .slick-active {
+      border: 1px solid $color-orange;
+      background: $color-orange;
+    }
+  }
+}
