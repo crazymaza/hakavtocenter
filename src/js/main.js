@@ -39,4 +39,31 @@ $(function () {
     autoplaySpeed: 5000,
     adaptiveHeight: true,
   });
+
+  $('.slider__second').slick({
+    arrows: true,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    adaptiveHeight: true,
+    centerMode: true,
+    slidesToShow: 3,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });

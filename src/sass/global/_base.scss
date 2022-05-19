@@ -108,10 +108,45 @@ textarea {
 }
 
 .block_description {
-  @include css-lock(12, 16, 375, 1440, font-size, px);
+  @include css-lock(12, 14, 375, 1440, font-size, px);
   font-style: normal;
   font-weight: 500;
   line-height: 2.5rem;
   text-transform: uppercase;
   color: $color-white;
+
+  @include media('<=550px') {
+    line-height: 1.5rem;
+  }
+}
+
+.btn {
+  max-width: 203px;
+  max-height: 61px;
+  padding: 16px 66px;
+  box-sizing: border-box;
+  background: $color-orange;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: $color-white;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  outline: none;
+  @include media('<=tabletSmall') {
+    align-self: center;
+  }
+  &:hover, &:focus {
+    background: lighten($color-orange, 10);
+  }
+  &:active {
+    background: lighten($color-orange, 20);
+    box-shadow: 0 0 10px 5px $color-orange;
+  }
+  &:focus {
+    box-shadow: 0 0 10px 1px $color-orange;
+  }
+
 }

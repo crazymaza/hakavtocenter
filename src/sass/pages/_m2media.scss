@@ -3,11 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 160px;
   flex-wrap: wrap;
+  @include css-lock(50, 160, 375, 1440, margin-bottom, px);
+  
   @include media("<=440px") {
     padding-left: 40px;
     padding-right: 40px;
+    margin-bottom: 50px;
   }
 
   .title__text {
