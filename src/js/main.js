@@ -51,10 +51,10 @@ $(function () {
     centerMode: true,
     slidesToShow: 3,
     responsive: [{
-        breakpoint: 768,
+        breakpoint: 880,
         settings: {
-          arrows: false,
-          slidesToShow: 3
+          arrows: true,
+          slidesToShow: 1
         }
       },
       {
@@ -66,4 +66,33 @@ $(function () {
       }
     ]
   });
+  $('.slider__third').slick({
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 5000,
+    adaptiveHeight: true,
+  });
+
+  function verticalTitle(selector, rotate = 90) {
+    let span = $(selector).find('span');
+    let titleWidth = span.width();
+    let titleHeight = span.height();
+
+    $(selector).css({
+      'width': titleHeight + 'px',
+      'height': titleWidth + 'px'
+    });
+    span.css({
+      'transform': `rotate(${rotate}deg)`
+    });
+  }
+
+  verticalTitle('.back__text');
+  verticalTitle('.back__life');
+
 });

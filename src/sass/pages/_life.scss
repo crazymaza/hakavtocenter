@@ -1,0 +1,44 @@
+.life {
+  padding: 180px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+
+  @include media("<=440px") {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 50px;
+  }
+
+  .title__text {
+    max-width: 648px;
+    z-index: 10;
+  }
+
+  .life__text_block {
+    max-width: 665px;
+    z-index: 10;
+
+    .life__text {
+      margin: 10px;
+    }
+  }
+
+  .back__life {
+    position: absolute;
+    top: 8rem;
+
+    p {
+      font-style: normal;
+      font-weight: 700;
+      @include css-lock(100, 288, 375, 1440, font-size, px);
+      @include css-lock(100, 400, 375, 1440, line-height, px);
+      color: $color-body;
+      transform: rotate(90deg) translateY(90%);
+      text-shadow: 0 0 2px $color-orange;
+    }
+  }
+}

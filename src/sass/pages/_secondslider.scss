@@ -1,11 +1,22 @@
 .slider__second {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-height: 480px;
   padding-bottom: 66px;
-  @include css-lock(30, 180, 370, 1440, margin-bottom, px);
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @include media("<=880px") {
+    padding-bottom: 40px;
+  }
+
+  @include media("<=604px") {
+    width: 100%;
+  }
 
   .slick-list {
+    z-index: 10;
+
     .slick-track {
       .slick-slide {
         margin: 0 10px;
@@ -13,18 +24,29 @@
         &.slick-center {
           .slide {
             width: 870px;
+            padding: 0;
+            transform: scale(1.2);
+
+            @include media("<=880px") {
+              transform: scale(1);
+            }
+
+            @include media("<=604px") {
+              width: 100%
+            }
+
           }
         }
 
         .slide {
           transition: 0.3s ease-in;
-          //   transform: scale(1.5);
         }
       }
     }
 
     .slide {
-      max-width: 870px;
+      padding: 40px;
+      @include gpu;
 
       .slide__img {
         width: 100%;
@@ -50,18 +72,23 @@
   width: 30px;
   height: 30px;
   left: 46%;
-  background-image: url("/img/icons/right-arrow.svg");
+  margin-right: 60px;
+  background-image: url("../img/icons/right-arrow.svg");
   background-position: 45% 45%;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.4s ease 0s;
+
+  @include media("<=880px") {
+    left: 40%;
+  }
 }
 
 .slick-next {
   width: 30px;
   height: 30px;
   right: 46%;
-  background-image: url("/img/icons/left-arrow.svg");
+  background-image: url("../img/icons/left-arrow.svg");
   background-position: 55% 45%;
   background-size: cover;
   background-repeat: no-repeat;

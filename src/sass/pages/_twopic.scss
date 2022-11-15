@@ -1,0 +1,38 @@
+.twopic {
+  min-height: 540px;
+  margin: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+
+  .img__block {
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+    @include media("<=tabletSmall") {
+        flex-wrap: wrap;
+    }
+
+    .block {
+      img {
+        width: 100%;
+        height: auto;
+        @include gpu;
+      }
+    }
+  }
+
+  .twopic__btn {
+    background-color: transparent;
+    color: $color-orange;
+    border: 2px solid $color-orange;
+    z-index: 10;
+
+    &:hover {
+      color: $color-white;
+      background: $color-orange;
+    }
+  }
+}

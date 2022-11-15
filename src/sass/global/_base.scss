@@ -17,7 +17,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background-color: $color-black;
+  background-color: $color-body;
   color: $color-white;
   font-family: 'Montserrat', sans-serif;
   font-size: 100%;
@@ -123,7 +123,7 @@ textarea {
 .btn {
   max-width: 203px;
   max-height: 61px;
-  padding: 16px 66px;
+  padding: 16px 60px;
   box-sizing: border-box;
   background: $color-orange;
   border-radius: 8px;
@@ -135,18 +135,50 @@ textarea {
   border: none;
   transition: 0.3s ease;
   outline: none;
+
   @include media('<=tabletSmall') {
     align-self: center;
   }
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     background: lighten($color-orange, 10);
   }
+
   &:active {
     background: lighten($color-orange, 20);
     box-shadow: 0 0 10px 5px $color-orange;
   }
+
   &:focus {
     box-shadow: 0 0 10px 1px $color-orange;
+  }
+}
+
+.back__text_right {
+  right: 7%;
+}
+
+.back__text_left {
+  left: 7%;
+}
+
+.back__text {
+  position: absolute;
+  top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 0;
+
+  span {
+    font-style: normal;
+    font-weight: 700;
+    @include css-lock(100, 288, 375, 1440, font-size, px);
+    @include css-lock(100, 400, 375, 1440, line-height, px);
+    color: $color-body;
+    text-shadow: 0 0 2px $color-orange;
   }
 
 }

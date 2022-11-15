@@ -1,0 +1,50 @@
+.slider__third {
+  position: relative;
+  width: 100%;
+  z-index: 30;
+
+  .slick-list {
+    max-height: 1000px;
+
+    .slick-track {
+      max-height: 1000px;
+
+      .slide {
+        max-height: 1000px;
+      }
+    }
+  }
+
+  .slide {
+    .slide__img {
+      width: 100%;
+      height: auto;
+      filter: brightness(60%);
+    }
+  }
+
+  .slick-dots {
+    @include center(h);
+    bottom: 60px;
+    display: flex;
+    gap: 40px;
+
+    @include media("<=tabletReg") {
+      right: 35%;
+      bottom: 5%;
+      flex-direction: row;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      width: 8px;
+      height: 8px;
+      border: 1px solid $color-white;
+
+      button {
+        display: none;
+      }
+    }
+  }
+}

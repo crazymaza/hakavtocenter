@@ -93,17 +93,22 @@
   }
 
   .slick-dots {
+    display: flex;
     position: absolute;
     right: 80px;
     bottom: 40%;
-    display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: flex-end;
 
     @include media("<=tabletReg") {
       right: 35%;
       bottom: 5%;
       flex-direction: row;
+    }
+
+    @include media('<=425px') {
+      display: none;
     }
 
     li {

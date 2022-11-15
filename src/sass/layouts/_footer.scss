@@ -1,3 +1,123 @@
 // Footer styles bgn
+.page-footer {
+  background-color: $color-black;
+  z-index: 10;
+
+  .upper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-white;
+    padding: 80px 80px 170px 80px;
+
+    @include media("<=tabletMid") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .block {
+      .title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: $color-white;
+      }
+
+      .social {
+        p {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          text-transform: uppercase;
+          color: $color-white;
+        }
+
+        .icons {
+          display: flex;
+          gap: 28px;
+          cursor: pointer;
+          align-items: center;
+
+          .icon {
+            width: 48px;
+            height: 48px;
+
+            &.union {
+              width: 38px;
+              height: 38px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style: none;
+          margin-bottom: 42px;
+          margin-right: 20px;
+
+          a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-white;
+          }
+
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 80px 70px 80px;
+
+    @include media("<=tabletMid") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+}
 
 // Footer styles end

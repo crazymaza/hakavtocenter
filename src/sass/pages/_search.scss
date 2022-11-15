@@ -1,0 +1,30 @@
+.search {
+  max-height: 260px;
+  text-align: center;
+  background-color: $color-black;
+  padding: 68px 0;
+
+  .search__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    z-index: 10;
+  }
+
+  .search__text {
+    margin: 0 auto;
+    max-width: 910px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    z-index: 20;
+  }
+}
